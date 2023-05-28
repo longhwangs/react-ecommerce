@@ -7,7 +7,7 @@ const ProductCard = (props) => {
     let location = useLocation();
 
     return (
-        <div className={` ${location.pathname == "/store" ? `col-${grid}` : "col-3"} `}>
+        <div className={` ${location.pathname === "/store" ? `col-${grid}` : "col-3"} `}>
             <Link to='/product/:id' className='product-card position-relative'>
                 <div className='wishlist-icon position-absolute'>
                     <button className='border-0 bg-transparent'>
@@ -30,7 +30,7 @@ const ProductCard = (props) => {
                         edit={false}
                         activeColor="#ffd700"
                     />
-                    <p className={`description ${grid == 12 ? "d-block" : "d-none"}`}>
+                    <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
                         Helmet takes plain HTML tags and outputs plain HTML tags. It's dead simple, and React beginner friendly.
                     </p>
                     <p className='price'>$100.00</p>
